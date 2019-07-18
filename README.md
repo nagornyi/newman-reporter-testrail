@@ -34,6 +34,8 @@ TestRail suite id.  Mandatory in multi-suite projects.  Do not use in single-sui
 Title of test run to create.
 * TESTRAIL_TYPE (optional)
 Type of test cases to add to the test run.
+* TESTRAIL_CLOSE_RUN (optional)
+Close run if all tests are passed
 
 You can use [direnv](https://github.com/direnv/direnv) to easily maintain directory-specific options.
 
@@ -53,5 +55,6 @@ TESTRAIL_APIKEY="myapikey"
 TESTRAIL_PROJECTID="1"
 TESTRAIL_TITLE="Dev-API Regression"
 TESTRAIL_TYPE="Automated"
+TESTRAIL_CLOSE_RUN="true"
 newman run my-collection.postman_collection.json -r testrail,cli --bail
 ```
